@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="..\static\css\styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy kNN Deteksi Kartu Kredit</title>
+</head>
+<body>
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+        </div>
+        <form method="post" action="/">
+        <h3 style="width: 100%; height: 50px;">Deteksi Kartu Kredit !</h3>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <div class="form-group">
+                    <span>Checking Status :</span>
+                    <input type="text" name="checking_status" class="form-control" placeholder="Masukkan Angka" value="" />
+                </div>
+                <div class="form-group">
+                    <span>Duration :</span>
+                    <input type="text" name="duration" class="form-control" placeholder="Masukkan Angka" value="" />
+                </div>
+
+                <div class="form-group">
+                    <span>Credit History :</span>
+                    <input type="text" name="credit_history" class="form-control" placeholder="Masukkan Angka" value="" />
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <div class="form-group">
+                    <span>Credit Amount :</span>
+                    <input type="text" name="credit_amount" class="form-control" placeholder="Masukkan Angka" value="" />
+                </div>
+                <div class="form-group">
+                    <span>Savings Status :</span>
+                    <input type="text" name="savings_status" class="form-control" placeholder="Masukkan Angka" value="" />
+                </div>
+                <div class="form-group">
+                    <span>Age :</span>
+                    <input type="text" name="age" class="form-control" placeholder="Masukkan Angka" value="" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="btnSubmit" class="btnContact float-right">Send Data</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group col-md-6 mx-auto text-center">
+            <div class="card mt-5">
+                <div class="card-body mt-5">
+                    <h3 style="width: 100%; ">Hasil Prediksi</h3>
+                    {% if data == 0 %}
+                    <h5 style="width: 100%; margin-top: 20px;">BURUK</h2>
+                    {% elif data == 1 %}
+                    <h5 style="width: 100%; margin-top: 20px;">BAIK</h2>
+                    {% else %}
+                    <h5 style="width: 100%; margin-top: 20px;">HASIL</h2>
+                    {%endif%}
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
