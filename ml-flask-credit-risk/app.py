@@ -19,12 +19,12 @@ def index():
         datas = np.array((checking_status,duration,credit_history,credit_amount,savings_status,age))
         datas = np.reshape(datas, (1, -1))
 
-        isDiabetes = model.predict(datas)
+        isCreditrisk = model.predict(datas)
 
-        if isDiabetes == 0:
-            return render_template("index.html", data=isDiabetes)
-        elif isDiabetes == 1:
-            return render_template("index.html", data=isDiabetes)
+        if isCreditrisk == 0:
+            return render_template("index.html", data=isCreditrisk)
+        elif isCreditrisk == 1:
+            return render_template("index.html", data=isCreditrisk)
     else:
         return render_template("index.html", prediction_text = "Error Clasification")
 
